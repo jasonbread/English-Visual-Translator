@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Visual Translator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f2f2f2;
+    }
+    h1 {
+      color: #333;
+    }
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .result {
+      margin-top: 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #ccc;
+    }
+    img {
+      max-width: 150px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Visual Translator</h1>
+  <input type="text" id="wordInput" placeholder="Enter an English word">
+  <button onclick="showFakeResult()">Translate</button>
+
+  <div class="result" id="output"></div>
+
+  <script>
+    function showFakeResult() {
+      const word = document.getElementById('wordInput').value;
+      const output = document.getElementById('output');
+      
+      // Fake example result for now
+      output.innerHTML = `
+        <h2>Word: ${word}</h2>
+        <p><strong>Definition:</strong> A round fruit with red or green skin.</p>
+        <p><strong>Example:</strong> She ate an apple after lunch.</p>
+        <p><strong>Swedish:</strong> äpple</p>
+        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="apple">
+      `;
+    }
+  </script>
+
+</body>
+</html>
